@@ -1,12 +1,12 @@
+// app/(auth)/layout.tsx
 export default function RootLayout({
     children,
   }: Readonly<{
     children: React.ReactNode;
   }>) {
     return (
-      <main>
+      <main className="w-full h-full">
         {children}
       </main>
     );
-  }
-  
+  } 

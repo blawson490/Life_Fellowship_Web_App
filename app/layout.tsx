@@ -14,9 +14,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const theme = "";
+
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${theme} ${inter.className} min-h-screen min-w-screen`}>{children}</body>
     </html>
   );
 }
+
