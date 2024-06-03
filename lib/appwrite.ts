@@ -3,7 +3,7 @@
 import { Client, Account, Databases, Users } from "node-appwrite";
 import { cookies } from "next/headers";
 
-
+const { endpoint, project, key } = process.env;
 export async function createSessionClient() {
     let endpoint = process.env.NEXT_PUBLIC_APPWRITE_ENDPOINT;
     let project = process.env.NEXT_PUBLIC_APPWRITE_PROJECT;

@@ -32,3 +32,73 @@ declare interface UserSessionUser {
     targets: Target[];
     accessedAt: string;
 }
+
+declare interface CreateEventProps {
+    title: string;
+    EventImageURL: URL;
+    location: string;
+    eventDateTime: Date;
+    shortDescription: string;
+    description: string;
+    price: number;
+    pricePer: string;
+    hasAction: boolean;
+    actionText: string;
+    importantMessage: string;
+    createdBy: string;
+    attendees: string[];
+}
+
+// types/event.ts
+declare interface Event {
+    title: string;
+    EventImageURL: string | null;
+    location: string;
+    eventDateTime: string;
+    shortDescription: string;
+    description: string | null;
+    price: number;
+    pricePer: string;
+    hasAction: boolean;
+    actionText: string;
+    importantMessage: string;
+    $id: string;
+    $createdAt: string;
+    $updatedAt: string;
+    $permissions: any[];
+    createdBy: CreatedBy;
+    attendees: Attendee[];
+    $databaseId: string;
+    $collectionId: string;
+  }
+  
+  declare interface CreatedBy {
+    email: string;
+    userID: string;
+    firstName: string;
+    lastName: string;
+    role: string;
+    createdAt: string;
+    $id: string;
+    $createdAt: string;
+    $updatedAt: string;
+    $permissions: any[];
+    $databaseId: string;
+    $collectionId: string;
+  }
+  
+  declare interface Attendee {
+    email: string;
+    userID: string;
+    firstName: string;
+    lastName: string;
+    role: string;
+    createdAt: string;
+    $id: string;
+    $createdAt: string;
+    $updatedAt: string;
+    $permissions: any[];
+    $databaseId: string;
+    $collectionId: string;
+  }
+  
